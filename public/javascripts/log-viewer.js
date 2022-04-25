@@ -7,8 +7,10 @@ const onOpen = () => {
   });
 };
 
-const onMessage = (event) => {
-  connection.onmessage(() => {
-    innerHTML.logWindow(event.data);
-  });
+connection.onopen = () => {
+  connection.send("Hello from the client!");
+};
+
+connection.onmessage = (event) => {
+  logWindow.innerHTML = event.data;
 };
