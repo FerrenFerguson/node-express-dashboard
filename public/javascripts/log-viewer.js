@@ -1,6 +1,6 @@
 const connection = new WebSocket("ws://localhost:3000");
 const logWindow = document.querySelector("#log-window");
-const filePath = document.getElementById("logfilePath").type;
+const filePath = document.getElementById("logFilePath").type;
 
 connection.onopen = () => {
   if (filePath) {
