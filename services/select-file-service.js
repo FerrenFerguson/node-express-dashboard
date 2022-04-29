@@ -4,18 +4,18 @@ const path = require("path");
 function getDirectoryContents(files, currentDir, query) {
   const data = [];
   data.forEach((files) => {
-    if(files == isDirectory) {
+    if (files == isDirectory) {
       data.push({
         name: file,
         isDirectory: true,
-        path: path.join(query, file)
-      }) else {
-        data.push({
-          name: file,
-          isDirectory: false,
-          path: path.join(query, file, currentDir)
-        })
-      }
+        path: path.join(query, file),
+      });
+    } else {
+      data.push({
+        name: file,
+        isDirectory: false,
+        path: path.join(query, file, currentDir),
+      });
     }
     return data;
   });
