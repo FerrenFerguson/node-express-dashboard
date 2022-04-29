@@ -9,6 +9,6 @@ connection.onopen = () => {
 };
 
 connection.onmessage = (event) => {
-  const logs = str.split("\n").join("<hr>");
+  const logs = event.data.split("\n").join("<hr>");
   logWindow.innerHTML = logs.event.data;
 };
