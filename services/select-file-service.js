@@ -10,7 +10,7 @@ function getDirectoryContents(files, currentDir, query) {
         isDirectory: true,
         path: path.join(query, file),
       });
-    } else {
+    } else if (files !== isDirectory) {
       data.push({
         name: file,
         isDirectory: false,
