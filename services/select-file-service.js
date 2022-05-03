@@ -1,6 +1,7 @@
 const { json } = require("express/lib/response");
 const fs = require("fs");
 const path = require("path");
+const dir = process.cwd();
 
 function getDirectoryContents(files, currentDir, query) {
   const data = [];
