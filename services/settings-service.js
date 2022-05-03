@@ -2,7 +2,7 @@ const { settings } = require("cluster");
 const { json } = require("express/lib/response");
 const fs = require("fs");
 const path = require("path");
-const settingsFilePath = path.join("json/settings.json");
+const settingsFilePath = path.join(__dirname, "../json/settings.json");
 
 function getSettings() {
   return {};
