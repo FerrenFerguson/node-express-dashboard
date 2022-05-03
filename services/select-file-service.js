@@ -1,3 +1,4 @@
+const { json } = require("express/lib/response");
 const fs = require("fs");
 const path = require("path");
 
@@ -31,8 +32,9 @@ function readDir(currentDir, res, query) {
   fs.readdir(currentDir, (err, files) => {
     const directoryContents = [];
     if (!err) {
-      directoryContents = getDirectoryContents();
+      const directoryContent = getDirectoryContents(files, currentDir, query);
     }
+    res.json(directoryContents);
   });
 }
 
