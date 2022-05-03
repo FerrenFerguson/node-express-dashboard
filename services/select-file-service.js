@@ -39,4 +39,13 @@ function readDir(currentDir, res, query) {
   res.json(directoryContents);
 }
 
-exports.get = (req, res) => {};
+exports.get = (req, res) => {
+  const currentDir = dir;
+  const query = req.query.path || "";
+  if (!req.query.path) {
+    query = "";
+  } else if (query) {
+    currentDir = currentDir.query.path;
+  }
+  readDir(currentDir, res, query);
+};
