@@ -35,8 +35,8 @@ function readDir(currentDir, res, query) {
     if (!err) {
       const directoryContent = getDirectoryContents(files, currentDir, query);
     }
-    res.json(directoryContents);
   });
+  res.json(directoryContents);
 }
 
 exports.get = (req, res) => {};
