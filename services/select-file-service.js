@@ -2,10 +2,10 @@ const { json } = require("express/lib/response");
 const fs = require("fs");
 const path = require("path");
 let dir;
- 
-exports.setcwd = (cwd) = { 
-  dir = cwd;
-}
+
+// exports.setcwd = (cwd) = {
+//   dir = cwd
+// }
 function getDirectoryContents(files, currentDir, query) {
   const data = [];
   files.forEach((file) => {

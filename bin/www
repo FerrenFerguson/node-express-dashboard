@@ -7,7 +7,7 @@ const debug = require("debug")("log-dashboard:server");
 const http = require("http");
 const WebSocket = require("ws");
 const fs = require("fs");
-import { getSettings } from "../services/settings-service";
+// import { getSettings } from "../services/settings-service";
 const { chunk } = require("lodash");
 /**
  * Get port from environment and store in Express.
